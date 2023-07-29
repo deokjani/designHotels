@@ -136,3 +136,15 @@ $('.m-again').on({click:function(){
     $(this).hide();
 }});
 
+
+const TrendingWrap = $('.tranding-wrap');
+let offset = TrendingWrap.offset().left;
+//console.log(offset)
+TrendingWrap.on({mousemove(e){
+    //console.log(e.pageX);
+    if(e.pageX>=1560){
+        return false;
+    }else{
+        $(this).css({left: -e.pageX});
+    }
+}});
